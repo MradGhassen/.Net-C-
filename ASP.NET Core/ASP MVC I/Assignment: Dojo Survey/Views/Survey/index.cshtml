@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <title>Dojo Survey</title>
+        <meta description=''
+    <meta charset='utf-8'/>
+    <link rel='stylesheet' type='text/css' href='~/css/styles.css'>
+</head>
+<body>
+    <div id='wrapper'>
+        <h1>Dojo Survey</h1><br>
+        <form id="userform" action="userformsubmit" method="post">
+            <div id="formlabels">
+                <label for="name">Your Name:</label><br>
+                <label for="location">Dojo Location:</label><br>
+                <label for="language">Favorite Language:</label><br>
+                <label for="comment">Comment (optional):</label><br>
+            </div>
+            <div id="formfields">
+                <input type="text" name=username id='username'><br>
+                <select name="location" id='location'>
+                    <option value='tunis'>Tunis</option>
+                    <option value='nabel'>Nabel</option>
+                    <option value='sfax'>Sfax</option>
+                    <option value='soussa'>Soussa</option>
+                    <option value='kef'>Kef</option>
+                </select><br>
+                <select name="language" id='language'>
+                    <option value='sql'>SQL</option>     
+                    <option value='java'>Java</option>     
+                    <option value='python'>Python</option>     
+                    <option value='javascript'>Javascript</option>     
+                    <option value='csharp'>C#</option>
+                    <option value='perl'>Perl</option>
+                    <option value='php'>PHP</option>
+                </select><br>
+                <textarea name="comments" id="comments" cols="60" rows="4"></textarea>
+            </div>
+            <button type="submit" id="button" value="Button">Button</button>
+        </form>
+    </div>
+</body>
+</html>
