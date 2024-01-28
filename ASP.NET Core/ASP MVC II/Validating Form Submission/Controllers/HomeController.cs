@@ -22,6 +22,7 @@ public class HomeController : Controller
     }
     {
         // Oh no!  We need to return a ViewResponse to preserve the ModelState, and the errors it now contains!
+        ViewBag.errors = ModelState.Values;
         return View("NewUser");
     }
     }
