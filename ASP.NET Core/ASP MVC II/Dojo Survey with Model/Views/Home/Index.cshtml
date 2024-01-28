@@ -1,0 +1,24 @@
+﻿
+@Model
+<div class="mb-3">
+    <h1 class="display-4">Welcome to Dojo Survey</h1>
+    <form class="form" action="/survey" method="post">
+        <!-- your Survey fields go here! -->
+        <label class="form-label" for="Name">Your Name:</label>
+        <input class="form-control" type="text"  name="Name"  >    
+        <label class="form-label" for="Locations">Dojo Location:</label>
+        <select id="disabledSelect" class="form-select" name="Locations">
+            <option value="tunis">Tunis</option>
+            <option value="Sfax">Sfax</option>            
+        </select>    
+        <label class="form-label" for="Languages">Favorite Language:</label>
+        <select id="disabledSelect" class="form-select" name="Languages">
+            <option value="python">Python</option>
+            <option value="csharp">C#</option>
+        </select>
+        <label class="form-label" class="form-control" for="Comments">Comment (Optional)</label>
+            <textarea class="form-control" name="Comments"></textarea>
+        <input class="btn btn-primary"type="submit"  value="submit">
+    </form>
+
+</div>
