@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Validating Form Submission/1.0.0": {
+        "runtime": {
+          "Validating Form Submission.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Validating Form Submission/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
