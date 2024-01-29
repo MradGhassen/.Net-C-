@@ -1,0 +1,23 @@
+﻿@model Survey
+
+<h1>Enter your information below:</h1>
+<form asp-action="Create" asp-controller="Home" method="post">
+    <span asp-validation-for="Name"></span>
+    <label class="form-label" asp-for="Name">Name</label>
+    <input class="form-control" asp-for="Name">    
+    <span asp-validation-for="Locations"></span>
+    <label class="form-label" asp-for="Locations">Dojo Location:</label>
+    <select id="disabledSelect" class="form-select" asp-for="Locations">
+            <option value="tunis">Tunis</option>
+            <option value="Sfax">Sfax</option>            
+        </select>   
+    <span asp-validation-for="Languages"></span>
+    <label class="form-label" asp-for="Languages">Languages</label>
+    <select id="disabledSelect" class="form-select" asp-for="Languages">
+            <option value="python">Python</option>
+            <option value="csharp">C#</option>
+        </select>     
+    <label class="form-label" asp-for="Comments">Comment (Optional)</label>
+            <textarea class="form-control" asp-for="Comments"></textarea>
+    <input class="btn btn-primary" value="Add User" type="submit">    
+</form>
