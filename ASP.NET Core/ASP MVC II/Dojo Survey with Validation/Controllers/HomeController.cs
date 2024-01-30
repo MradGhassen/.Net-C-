@@ -17,13 +17,12 @@ public class HomeController : Controller
     {            
     if(ModelState.IsValid)
     {
-        return RedirectToAction("Action");
+        return RedirectToAction("Action", survey);
         // do somethng!  maybe insert into db?  then we will redirect
     }
     {
         // Oh no!  We need to return a ViewResponse to preserve the ModelState, and the errors it now contains!
-        ViewBag.errors = ModelState.Values;
-        return View("Errors");
+        return View("Index", survey);
     }
     }
     [HttpGet("Action")] 
