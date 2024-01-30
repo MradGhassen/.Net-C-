@@ -13,6 +13,5 @@ public class Survey
     [Required]
     public string? Languages { get; set; }
 
-    [Required]
     public string? Comments { get; set; }
 }
