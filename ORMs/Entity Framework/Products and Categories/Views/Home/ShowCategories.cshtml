@@ -1,0 +1,37 @@
+@model Assossiations
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <h3>Products: </h3>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <td>Product Name</td>
+                    
+                </tr>
+                </thead>
+                <tbody>                
+                        @foreach(Products p in ViewBag.AllProducts)
+                        {
+                            <tr>
+                                <td>@p.Name </td>
+                            </tr>
+                        }  
+                        </tbody>
+            </table>
+        </div>
+        <div class="col-lg-6">
+            <h3>Add Product</h3>
+            <form action="/CatProd/add" method="post">
+                <label for="ProductId"> Products : </label>
+        <select asp-for="ProductId" class="form-control">
+            @foreach (Products a in ViewBag.AllProducts)
+            {
+                <option value="@a.ProductId"> @a.Name</option>
+            }
+        </select>
+                <input type="submit"  value="Add" class="btn btn-success">
+            </form>
+        </div>
+    </div>
+</div>
