@@ -1,0 +1,21 @@
+<h3>Yum, take a look at our tasty dishes!</h3>
+<hr>
+<table class="table table-striped table-bordered">
+    <thead>
+        <th>Name</th>
+        <th>Chef</th>
+        <th>Tastiness</th>
+        <th>Calories</th>
+    </thead>
+    <tbody>
+        @foreach (var a in ViewBag.AllDishes)
+        {
+            <tr>
+                <td>@a.Name</td>
+                <td>@a.Chef.FirstName @a.Chef.LastName</td>
+                <td>@a.Tastiness</td>
+                <td>@a.Calories</td>
+            </tr>
+        }
+    </tbody>
+</table>
