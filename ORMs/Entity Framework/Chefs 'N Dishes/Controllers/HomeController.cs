@@ -39,7 +39,7 @@ public class HomeController : Controller
         else
         {
             ViewBag.AllChefs = _context.Chefs.ToList();
-            return View("AddChef");
+            return View("Index");
         }
     }
     [HttpGet("Dishes")]
@@ -64,12 +64,8 @@ public class HomeController : Controller
             _context.SaveChanges();
             return RedirectToAction("AddDishe");
         }
-        else
-        {
-            ViewBag.AllChefs = _context.Chefs.ToList();
-
-            return View("AddDishe");
-        }
+     ViewBag.AllChefs = _context.Chefs.ToList();
+     return View("Index");
     }
 
     public IActionResult Privacy()
