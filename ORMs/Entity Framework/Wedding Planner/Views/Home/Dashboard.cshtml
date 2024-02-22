@@ -1,0 +1,57 @@
+@model Wedding
+
+<div class="container">
+    <div class="row">
+        <h1>Welcome to the Wedding Planner</h1>
+        <div class="col-sm-2">
+                    <a href="/AddWedding">Add a Wedding</a>
+                </div>
+        <a asp-action="Clear" class="btn btn-danger">Logout</a>
+    </div>
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Wedding</th>
+                    <th>Date</th>
+                    <th>Guest</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var x in @ViewBag.AllWeddings)
+                    {
+                        <tr>
+                            <td><a href="/Wedding/@x.WeddingId">@x.WedderOne & @x.WedderTwo</a></td>
+                            <td>@x.Date</td>
+                            <td>@x.UsersAsGuest.Count</td>
+                            <td>
+                            @if(ViewBag.UserId == @x.UserId)
+                            {
+                                <a href="/Delete/@x.WeddingId" class="btn btn-primary">Delete</a>
+                            }
+                            @{
+                                var count = 0;
+                                foreach (var guest in @x.UsersAsGuest)
+                                {
+                                    if(@ViewBag.UserId == guest.UserId)
+                                    {
+                                        count++;
+                                    }
+                                }
+                                if(count == 0)
+                                {
+                                    <a href="/AddRsvp/@x.WeddingId" class="btn btn-primary">RSVP</a>
+                                }
+                                else
+                                {
+                                    <a href="/RemoveRsvp/@x.WeddingId" class="btn btn-primary">Un-Rsvp</a>
+                                }
+                            }
+                            </td>
+                        </tr>
+                    }    
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+@model Wedding
+<div class="container">
+<h2>Welcome to the Wedding Planner</h2>
+<div class="row"> 
+    <div class="col-sm-2">
+        <a href="/Dashboard">Dashboard</a>
+    </div>
+    <div class="col-sm-2">
+        <a href="/Clear">Log Out</a>
+    </div>
+</div>
+<div class="row">
+    <p>@Model.WedderOne and @Model.WedderTwo  Wedding</p>
+</div>
+<div class="row">
+    <p>Date: @Model.Date</p>
+</div>
+<div class="row">
+    <p>Guests: </p>
+        </div>
+        @foreach(var x in Model.UsersAsGuest)
+        {
+            <div class="row">
+                <span>@x.UsersAsGuest.UserName </span>
+            </div>
+        }
+</div>
